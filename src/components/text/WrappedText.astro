@@ -1,0 +1,10 @@
+---
+interface Props {
+	size: string;
+	className: string;
+}
+
+const { size, className } = Astro.props;
+---
+
+{size == "large" ? <span class={`xl:text-xl md:text-lg text-base w-max font-normal p-3 border border-dashed opacity-75 ${className}`}><slot /></span> : <span class="p-2 font-semibold text-black w-max bg-gradient-to-r from-blue-500 to-sky-500"><slot /></span>}

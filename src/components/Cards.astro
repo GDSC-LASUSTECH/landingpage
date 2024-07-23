@@ -1,0 +1,24 @@
+---
+interface Props {
+    items: Array<Array<string>>;
+    className: string;
+    imageClass: string;
+}
+
+const { items, className, imageClass } = Astro.props;
+
+import Highlight from "./text/Highlight.astro";
+---
+
+{items.map(item => (
+    <div class=`w-80 border border-dashed border-gray-700 flex flex-col justify-between shrink-0 overflow-hidden ${className}`>
+        <div class="h-full bg-gradient-to-r from-blue-500/80 to-sky-500/80">
+            <img src={"/" + item[1]} alt={item[0]} class=`object-cover h-full ${imageClass}`>
+        </div>
+        
+        <div class="flex items-center justify-center gap-2 px-5 py-4 text-center border border-gray-700 border-dashed">
+            <p class="text-base font-semibold leading-tight">{item[0]}</p>
+            {item.length == 3 ? <p class="text-base font-semibold leading-tight"><Highlight size="normal" className=''>({item[2]})</Highlight></p> : null}
+        </div>
+    </div>
+))}

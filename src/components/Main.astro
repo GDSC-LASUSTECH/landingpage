@@ -1,0 +1,36 @@
+---
+import ImageCards from './Cards.astro';
+import Scroll from '../components/Scroll.astro';
+import WrappedText from './text/WrappedText.astro';
+import Button from './Button.astro';
+import HeadingBig from './text/HeadingBig.astro';
+import Heading from './text/Heading.astro';
+import Paragraph from './text/Paragraph.astro';
+import Highlight from './text/Highlight.astro';
+import GradientBlob from './GradientBlob.astro';
+---
+
+<section class="container relative grid grid-cols-1 mx-auto mb-24 border border-gray-700 border-dashed md:pl-6 md:min-h-screen md:grid-cols-5">
+    <GradientBlob top="-300px" left="-450px" right='' scale="1.5" />
+    
+    <div class="relative col-span-3 px-12 py-20 md:min-h-screen md:p-0 md:w-5/6">
+        <div class="flex flex-col items-center justify-center gap-12 pt-16 text-center md:min-h-screen md:pt-0 md:gap-16 md:items-start md:text-left">
+            <div class="flex flex-col items-center gap-6 md:items-start">
+                <WrappedText size="normal" className=''>welcome to GDSC Lasustech!</WrappedText>  
+                <HeadingBig>want to learn how to <Highlight>build products</Highlight> people love?</HeadingBig>
+            </div>
+            <Button>Join GSDC Lasustech</Button>
+        </div>
+    </div>
+
+    <!-- <div class="box-border col-span-2 overflow-hidden border border-gray-700 border-dashed bg-gradient-to-r from-red-500 to-orange-500 bg-clip-padding md:sticky md:top-0 md:h-screen">
+        <img src="/main.gif" alt="" class="object-cover min-w-full min-h-full mix-blend-multiply">
+    </div> -->
+    <div class="box-border hidden col-span-2 overflow-hidden border border-gray-700 border-dashed bg-gradient-to-r from-blue-500 to-sky-300 bg-clip-padding md:stick md:top-0 md:h-screen">
+        <source src="/googledev.mp4" type="video/mp4" class="object-cover min-w-full min-h-full mix-blend-multiply">
+            <!-- <source src="/gooogledev.mp4" type="video/mp4"> -->
+            <!-- <img src="./jolvoy.gif" alt="" class="object-cover min-w-full min-h-full mix-blend-multiply"> -->
+            <!-- <source src="https://youtu.be/KlWVfEiW7Ak" type="video/mp4"> -->
+            <!-- <iframe width="1879" height="973" src="https://www.youtube.com/embed/KlWVfEiW7Ak" title="GDG: Groups of Developers Interested in Google&#39;s Technologies" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
+    </div>
+</section>
